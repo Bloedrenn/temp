@@ -1,0 +1,193 @@
+header {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdure8sed21ApCF6pqmJkpkIF_wlI1pfsX7g&s);
+  gap: 15px;
+  /* position: sticky;
+  top: 0; */
+  /* z-index: 1; */
+}
+
+.logo {
+  height: 35px;
+  border-radius: 50%;
+}
+
+.header-nav {
+  width: 75%;
+}
+
+.header-nav-link {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 20px 30px;
+  background-color: #FA8072;
+  border-radius: 10px;
+  transition: opacity 0.3s, transform 0.3s;
+  flex-shrink: 0;
+}
+
+.header-nav-link:hover {
+  opacity: 0.75;
+  transform: translateY(-2px);
+}
+
+.my-active {
+  background: black;
+  border: 1px solid white;
+}
+
+
+
+main {
+  background-color: coral;
+  flex-grow: 1;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 25%;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas: 
+    "posts page-nav"
+    "posts .";
+  /* position: sticky;
+  top: 10px; */
+}
+
+
+
+footer {
+  background-color: blueviolet;
+}
+
+
+
+
+.posts {
+  background-color: darkcyan;
+  grid-area: posts;
+}
+
+.post-container {
+  border: 1px solid black;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+
+.page-nav {
+  background-color: black;
+  grid-area: page-nav;
+  animation: fadeUp 0.8s ease;
+}
+
+.page-nav ul {
+  list-style-type: none;
+}
+
+
+.opinions {
+  background-color: brown;
+}
+
+.opinions-container {
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 10px;
+  /* column-gap: 10px; */
+  /* row-gap: 10px; */
+}
+
+.opinion-container {
+  background-image: url(https://cdn.ananasposter.ru/image/cache/catalog/poster/art/89/4772-1000x830.jpg);
+  background-size: cover;
+  padding: 25px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-radius: 15px;
+}
+
+.opinion-container .img-container {
+  width: 75%;
+  height: 75%;
+}
+
+.opinion-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 30px 5px #333;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.opinion-container img:hover {
+  box-shadow: 0 0 30px 10px #333;
+  transform: scale(1.01);
+}
+
+
+
+/* .d-flex {
+  display: flex;
+} */
+
+/* .d-grid {
+  display: grid;
+} */
+
+/*НЕ БЫЛО НИГДЕ .justify-content-around {
+  justify-content: space-around;
+} */
+
+/* .justify-content-between {
+  justify-content: space-between;
+} */
+
+/* .justify-content-center {
+  justify-content: center;
+} */
+
+/* .align-items-center {
+  align-items: center;
+} */
+
+/* .mb-1 {
+  margin-bottom: 1rem;
+} */
+
+/* .p-1 {
+  padding: 1rem;
+} */
+
+/* .text-white {
+  color: white;
+} */
+
+/* .text-center {
+  text-align: center;
+} */
+
+/* .text-decoration-none {
+  text-decoration: none;
+} */
+
+
+
+@media (max-width: 768px) {
+  .header-nav {
+    flex-direction: column;
+  }
+}
+
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

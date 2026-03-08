@@ -1,0 +1,14 @@
+* {
+  margin: 0 !important;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+body {
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  gap: 15px;
+}
